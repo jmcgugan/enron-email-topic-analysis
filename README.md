@@ -72,6 +72,8 @@ Eventually I transitioned from the notebook to .py files.
 
 One thing that became apparent during the EDA was that it takes a long time to do anything with half a million documents so it is important to write a pipeline that stores intermediate results in files so that they can be reused without having to go back to the start.
 
+![pipeline](images/pipeline.png)
+
 ### Stage 1: Parse Emails to Dataframe
 
 The source emails look like this:
