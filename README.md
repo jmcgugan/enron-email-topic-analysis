@@ -25,32 +25,10 @@ More generally, this study looks at what the data scientist can do with a big, r
 
 2. Do these topics change over time?
 
+We propose to analyze the Enron dataset less from the fraud perspective and more from the prospective that these are real emails exchanged within a single corporation as part of the daily life of that corporation.
+
 ## Data analysis
 
 The corpus consists of over 500,000 emails, mainly covering a two year period 2000-2001.
 
-1. The
-
-We propose to analyze the Enron dataset less from the fraud perspective and more from the prospective that these are real emails exchanged within a single corporation as part of the daily life of that corporation.
-
-###Topic Analysis
-
-What do these emails talk about? We propose to perform a variety of topic analyses, including TF-IDF, SVD, and NMF to see if we can identify latent topic clusters in the data. It will be particularly interesting to associate topics with people.
-
-As a stretch objective, we would like to progress beyond the "bag of words" approach. I am particularly drawn to the [Positive Pointwise Mutual Information (PPMI) technique](https://en.wikipedia.org/wiki/Pointwise_mutual_information#mw-head) which looks at words in context. It is a natural progression from Naive Bayes as it works by looking at the ratio of the joint probability of word i and word j to the Naive Bayes assumption of P(Wi)*P(Wj).
-
-It would seem that PPMI is somewhat underused in Python because there is [no prebuilt implementation of it](https://stackoverflow.com/questions/22118350/python-sentiment-analysis-using-pointwise-mutual-information). As a *stretch* objective, I would like to try coding PPMI.
-
-###How Efficient is Email?
-
-We all have the experience of receiving vastly more email than we need. We could take the view that an email is either actioned or it is not. Actions consist of replying, forwarding, or at least filing the email in a subject folder. We could take the perspective that an email which is received and not actioned is of dubious usefulness to the recipient. What is the ratio of actioned emails to received emails?
-
-##Network Analysis
-
-What can we say about the links between individuals implied by email traffic? Are there connectors who stand between different communities?
-
-##Analysis of the Proposal
-
-We appreciate that a good proposal consists of a good question plus good data. We think we have good data for this proposal but the questions are a bit diffuse at the moment. That is probably the biggest weakness of the proposal.
-
-Nevertheless, the author has existed in the corporate world for many years and knows well the daily agony of getting to inbox 0. I am very keen on assessing the efficiency of email as a vehicle for coporate communication.
+1. The source data is in standard email format, i.e. a multipart format with To, From, Subject… metadata plus a possibly multipart MIME payload. This was parsed to a "wide" dataframe with separate columns for To, From, content, etc.
