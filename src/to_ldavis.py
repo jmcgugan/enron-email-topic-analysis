@@ -27,11 +27,5 @@ def make_lda_visualization(corpora_dir, model_dir, vis_dir, fname):
     pyLDAvis.save_html(davis, vis_dir + fname + '.html')
 
 if __name__ == '__main__':
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-06-01 00:00:00 thru 2001-06-30 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-07-01 00:00:00 thru 2001-07-31 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-08-01 00:00:00 thru 2001-08-31 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-09-01 00:00:00 thru 2001-09-30 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-10-01 00:00:00 thru 2001-10-31 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-11-01 00:00:00 thru 2001-11-30 23:59:59')
-    make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-12-01 00:00:00 thru 2001-12-31 23:59:59')
-    # make_lda_visualizations('../data/corpora', '../data/lda', '../data/ldavis')
+    # make_lda_visualization('../data/corpora/', '../data/lda/','../data/ldavis/', '2001-05-01 00:00:00 thru 2001-05-31 23:59:59')
+    make_lda_visualizations('../data/corpora', '../data/lda', '../data/ldavis')
