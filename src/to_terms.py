@@ -34,7 +34,10 @@ def add_terms_col(df):
     df['terms'] = df['content'].map(tokenize)
     return df
 
-if __name__ == '__main__':
+def make():
     emails = pd.read_csv('../data/emails_wide.csv')
     add_terms_col(emails)
     emails.to_pickle('../data/emails_wide_terms.pkl')
+
+if __name__ == '__main__':
+    make()

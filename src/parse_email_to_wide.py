@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 import email
 
+def make():
+    parse_email_to_wide('../data/emails.csv', '../data/emails_wide.csv')
+
 ## Helper functions
 def get_text_from_email(msg):
   '''To get the content from email objects'''
@@ -52,4 +55,4 @@ def parse_email_to_wide(infilename, outfilename):
 
 
 if __name__ == '__main__':
-  parse_email_to_wide('../data/emails.csv', '../data/emails_wide.csv')
+    make()

@@ -14,7 +14,10 @@ def make_dictionary(doc2terms):
 
     return term2id_dict
 
-if __name__ == '__main__':
+def make():
     emails = pd.read_pickle('../data/emails_wide_terms.pkl')
     dictionary = make_dictionary(emails.terms.tolist())
     dictionary.save('../data/emails_all_terms.dict')
+
+if __name__ == '__main__':
+    make()
