@@ -23,7 +23,7 @@ def make_lda_visualization(dictionary, corpora_dir, model_dir, vis_dir, fname):
     files are linked by sharing the same file name.
     '''
     corpus = corpora.MmCorpus(corpora_dir + fname + '.mm')
-    model = models.LdaModel.load(model_dir + fname + '.lda')
+    model = models.LdaMulticore.load(model_dir + fname + '.lda')
     davis = pyLDAvis.gensim.prepare(model, corpus, dictionary)
     pyLDAvis.save_html(davis, vis_dir + fname + '.html')
 
