@@ -35,7 +35,7 @@ def add_terms_col(df):
     return df
 
 def make():
-    emails = pd.read_csv('../data/emails_wide.csv')
+    emails = pd.read_pickle('../data/emails_wide.pkl')
     add_terms_col(emails)
     emails.to_pickle('../data/emails_wide_terms.pkl')
 
