@@ -2,8 +2,8 @@ import os
 from gensim import corpora, models, similarities
 
 def make():
-    #dictionary = corpora.Dictionary.load('../data/emails_all_terms.dict')
-    #make_lda_models(dictionary, '../data/corpora_from_all', '../data/lda_from_all')
+    dictionary = corpora.Dictionary.load('../data/emails_all_terms.dict')
+    make_lda_models(dictionary, '../data/corpora_from_all', '../data/lda_from_all')
     dictionary = corpora.Dictionary.load('../data/emails_trimmed_terms.dict')
     make_lda_models(dictionary, '../data/corpora_from_trimmed', '../data/lda_from_trimmed')
 
