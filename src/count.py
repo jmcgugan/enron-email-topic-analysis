@@ -24,7 +24,10 @@ if __name__ == '__main__':
     counters = count()
 
     for date, counter in sorted(counters.items()):
-        print(date + '\t' + str(counter['california']) + '\n')
+        if 'california' in counter:
+            print(date + '\t' + str(counter['california']) + '\n')
+        else:
+            print(date + '\t' + str(0) + '\n')
 
     with open('../data/term_counts.pkl', 'wb') as handle:
         pickle.dump(counters, handle, protocol=pickle.HIGHEST_PROTOCOL)
