@@ -17,7 +17,7 @@ def count():
             word_list = topic[0]
             for prob, word in word_list:
                 cntr[word] += 1
-        counters[fname] = counters
+        counters[fname] = cntr
     return counters
 
 if __name__ == '__main__':
