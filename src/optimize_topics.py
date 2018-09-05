@@ -23,7 +23,7 @@ def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
         #model = gensim.models.wrappers.LdaMallet(mallet_path, corpus=corpus, num_topics=num_topics, id2word=id2word)
         model = models.LdaMulticore(corpus, id2word=dictionary, num_topics=num_topics)
         model.save('../data/topic_optimization/' + str(num_topics) + ' topics.lda')
-        coherencemodel = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='c_v')
+        coherencemodel = models.CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='c_v')
         coherence_values.append(coherencemodel.get_coherence())
 
     return coherence_values
