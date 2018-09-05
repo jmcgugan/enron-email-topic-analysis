@@ -1,6 +1,6 @@
 import pandas as pd
 from gensim import corpora, models
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
     """
@@ -29,7 +29,7 @@ def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
     return coherence_values
 
 def find_optimal_num_topics():
-    emails = pd.read_pickle('../data/periods.2001-01.pkl')
+    emails = pd.read_pickle('../data/periods/2001-01.pkl')
     tokenized_texts = emails['terms'].tolist()
     dictionary = corpora.Dictionary.load('../data/emails_trimmed_terms.dict')
     corpus = corpora.MmCorpus('..data/corpora_from_trimmed/2001-01.mm')
@@ -44,11 +44,11 @@ def find_optimal_num_topics():
     for m, cv in zip(x, coherence_values):
         print("Num Topics = " + str(m) + "\thas Coherence Value of " + str(round(cv, 4)))
     # Generate plot
-    plt.plot(x, coherence_values)
-    plt.xlabel("Num Topics")
-    plt.ylabel("Coherence score")
-    plt.legend(("coherence_values"), loc='best')
-    plt.savefig('../data/topic_coherence_for_trimmed_dict_2001-01.png')
+    #plt.plot(x, coherence_values)
+    #plt.xlabel("Num Topics")
+    #plt.ylabel("Coherence score")
+    #plt.legend(("coherence_values"), loc='best')
+    #plt.savefig('../data/topic_coherence_for_trimmed_dict_2001-01.png')
 
 if __name__ == '__main__':
     find_optimal_num_topics()
