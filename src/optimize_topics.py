@@ -1,5 +1,6 @@
 import pandas as pd
 from gensim import corpora, models
+import pickle
 # import matplotlib.pyplot as plt
 
 def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
