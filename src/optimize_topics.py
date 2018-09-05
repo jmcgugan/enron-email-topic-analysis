@@ -32,7 +32,7 @@ def find_optimal_num_topics():
     emails = pd.read_pickle('../data/periods/2001-01.pkl')
     tokenized_texts = emails['terms'].tolist()
     dictionary = corpora.Dictionary.load('../data/emails_trimmed_terms.dict')
-    corpus = corpora.MmCorpus('..data/corpora_from_trimmed/2001-01.mm')
+    corpus = corpora.MmCorpus('../data/corpora_from_trimmed/2001-01.mm')
     coherence_values = \
         compute_coherence_values(dictionary, corpus, tokenized_texts, start=50, limit=501, step=50)
     with open('../data/topic_coherence_for_trimmed_dict_2001-01.pkl', 'wb') as handle:
